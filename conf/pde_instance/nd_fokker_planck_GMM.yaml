@@ -1,0 +1,18 @@
+domain_dim: !!int 2
+domain_min: !!float -10
+domain_max: !!float 10
+boundary_condition: !!str None
+diffusion_coefficient: !!float 2
+total_evolving_time: !!float 2
+name: !!str Kinetic-Fokker-Planck
+perform_test: !!bool False
+potential: !!str GMM
+train:
+  evolve_score: !!bool True
+  evolve_logprob: !!bool False
+test:
+  evolve_data: !!bool True
+  evolve_score: !!bool True
+  evolve_logprob: !!bool True
+test_metric: !!bool True
+metric: !!str trend-to-equilibrium

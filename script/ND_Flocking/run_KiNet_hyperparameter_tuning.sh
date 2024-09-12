@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python main.py --multirun pde_instance=3d_flocking train.optimizer.weight_decay=0.001,0.0005 neural_network.hidden_dim=20 neural_network.layers=5 plot.frequency=999999

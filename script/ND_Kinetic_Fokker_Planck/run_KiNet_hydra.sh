@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python main.py pde_instance=nd_fokker_planck train.optimizer.weight_decay=0 solver.train.batch_size_ref=0

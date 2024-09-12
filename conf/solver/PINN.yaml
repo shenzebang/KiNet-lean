@@ -1,0 +1,4 @@
+name: !!str PINN
+train:
+  batch_size: 4096
+  batch_size_initial: 4096

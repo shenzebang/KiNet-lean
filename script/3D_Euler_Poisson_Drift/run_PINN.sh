@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python main.py solver=PINN pde_instance.domain_min=-1 pde_instance.domain_max=1 train.number_of_iterations=800000 neural_network.hidden_dim=128 neural_network.layers=3 train.optimizer.grad_clipping.type=non-adaptive

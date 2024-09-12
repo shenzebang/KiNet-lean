@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python main.py --multirun pde_instance=nd_fokker_planck pde_instance.total_evolving_time=4 train.optimizer.weight_decay=0 solver.train.batch_size_ref=0 neural_network.hidden_dim=20 neural_network.layers=3 neural_network.time_embedding_dim=8,16,32

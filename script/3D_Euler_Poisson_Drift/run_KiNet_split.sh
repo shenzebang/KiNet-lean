@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=0 \
+    python main.py \
+        pde_instance.total_evolving_time=2 \
+        train.optimizer.weight_decay=0 \
+        train.batch_size=256 \
+        neural_network.hidden_dim=256 \
+        neural_network.layers=2 \
+        neural_network.activation=tanh \
+        plot.frequency=999999 \
+        train.optimizer.learning_rate.initial=1e-4 \
+        train.optimizer.method=ADAM \
+        train.optimizer.grad_clipping.threshold=999999 \
+        train.optimizer.learning_rate.scheduling=warmup-cosine \
+        train.number_of_time_shard=20 \
+        train.number_of_iterations=20000 \
+        pde_instance.domain_min=-1 \
+        pde_instance.domain_max=1 \
+        neural_network.time_embedding_dim=20 \
+        solver.train.batch_size_ref=50000\
+        train.normalize_grad=False
+        # train.optimizer.learning_rate.scheduling=warmup-cosine \

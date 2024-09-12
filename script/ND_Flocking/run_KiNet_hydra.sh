@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python main.py pde_instance=3d_flocking train.optimizer.weight_decay=0

@@ -1,0 +1,7 @@
+time_embedding_dim: !!int 0
+n_resblocks: !!int 3
+initialization: !!str kaiming
+hidden_dims: !!int 20
+layers: !!int 8
+activation: !!str relu
+name: !!str ResNet

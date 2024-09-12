@@ -1,0 +1,8 @@
+outputs/
+multirun/
+__pycache__/
+local_test_*.py
+test_*.py
+save/
+.idea
+*.gif

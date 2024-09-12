@@ -1,0 +1,44 @@
+defaults:
+  - pde_instance: 3d_euler_poisson
+  - solver: KiNet
+  - neural_network: MLP
+  - _self_
+backend:
+  use_pmap_train: False
+  use_pmap_test: False
+save_and_load:
+  load_model: False
+  save_model: False
+  save_frequency: 2000
+  model_directory: ./checkpoint
+test:
+  batch_size: 50000
+  frequency: 100
+  verbose: False
+baseline:
+  name: !!str particle method
+  batch_size: !!int 5000
+plot:
+  batch_size: 50000
+  frequency: 2000
+train:
+  pretrain: !!bool True
+  number_of_iterations: 80000
+  batch_size: 64
+  number_of_time_shard: !!int 1
+  normalize_grad: !!bool False
+  reduce_step_after_first_shard: !!bool False
+  optimizer:
+    reinitialize_per_shard: !!bool True 
+    method: SGD
+    momentum: 0.9
+    weight_decay: 0.001
+    learning_rate:
+      initial: 0.001
+      scheduling: None
+    grad_clipping:
+      type: !!str adaptive
+      threshold: 1
+ODE_tolerance: !!float 1e-5
+seed: 1
+mode: !!str normal

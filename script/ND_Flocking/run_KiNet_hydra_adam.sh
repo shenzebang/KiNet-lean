@@ -1,0 +1,14 @@
+CUDA_VISIBLE_DEVICES=2 python main.py \
+        pde_instance=3d_flocking \
+        train.optimizer.weight_decay=0 \
+        neural_network.hidden_dim=64 \
+        neural_network.layers=3 \
+        plot.frequency=999999 \
+        train.optimizer.learning_rate.initial=1e-3\
+        train.optimizer.method=ADAM \
+        train.optimizer.grad_clipping.threshold=999999 \
+        train.optimizer.learning_rate.scheduling=warmup-cosine \
+        test.batch_size=50000 \
+        neural_network.time_embedding_dim=20 \
+        pde_instance.total_evolving_time=6 \
+        neural_network.activation=gelu

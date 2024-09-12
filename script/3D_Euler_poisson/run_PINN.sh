@@ -1,0 +1,1 @@
+python main.py --PDE 3D-Euler-Poisson --method PINN --boundary_condition None --domain_dim 3 --number_of_iterations 400000 --learning_rate 1e-3 --batch_size_initial 2000 --batch_size 200 --domain_min -5 --domain_max 5 --total_evolving_time 2 --batch_size_test_ref 60000 --batch_size_ref 1000
