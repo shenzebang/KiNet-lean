@@ -1,8 +1,8 @@
 from core.distribution import Distribution
 import jax.numpy as jnp
 import flax.linen as nn
-from typing import Dict
-from jax.random import KeyArray
+from typing import Dict, Tuple
+from jax._src.random import KeyArray
 from dataclasses import dataclass
 from omegaconf import DictConfig
 from functools import partial
@@ -85,7 +85,7 @@ class Method:
             
             plot_velocity(total_time, produce_data())
 
-    def create_model_fn(self) -> (nn.Module, Dict):
+    def create_model_fn(self) -> Tuple[nn.Module, Dict]:
         raise NotImplementedError
 
     def metric_fn(self, forward_fn, params, time_interval, rng):

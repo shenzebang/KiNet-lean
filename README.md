@@ -14,6 +14,20 @@ A Jax-based implementation. The proposed KiNet loss is minimized via the adjoint
     - `score`
     - `logdensity`
 ## Examples
+
+### OU process
+Consider the OU process with a Gaussian initial distribution $Z(0) \sim p_0 = \mathcal{N}(m_0, \mathbf{P}_0)$,
+
+$$
+\mathrm{d} Z(t) = \mathbf{F} Z(t) \mathrm{d} t + \sqrt{\mathbf{L}} \mathrm{d} W(t)
+$$
+
+We know that $Z(t)$ has the distribution $p_t = \mathcal{N}(m_t, \mathbf{P}_t)$, where the mean $m(t)$ and covariance $\mathbf{P}_t$ evolve according to the following ODE
+
+$$
+\mathrm{d} m(t) = \mathbf{F} m(t) \mathrm{d} t, \quad \mathrm{d} \mathbf{P}_t = \mathbf{F} \mathbf{P}_t + \mathbf{P}_t\mathbf{F}^\top + \mathbf{L}.
+$$
+
 ### Kinetic Fokker-Planck Equation
 Let $x, v \in \mathbb{R}^{d}$ and use $z = [x, v]\in \mathbb{R}^{2d}$ to denote their concatenation.
 

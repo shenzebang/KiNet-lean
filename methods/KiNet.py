@@ -2,6 +2,7 @@ import methods.KiNet_instances.kinetic_fokker_planck as kinetic_fokker_planck
 import methods.KiNet_instances.euler_poisson as euler_poisson
 import methods.KiNet_instances.flocking as flocking
 import methods.KiNet_instances.hlandau as hlandau
+import methods.KiNet_instances.fokker_planck as fokker_planck
 from api import Method
 from functools import partial
 import jax.random as random
@@ -9,6 +10,7 @@ from utils.common_utils import evolve_data_score_logprob
 import jax.numpy as jnp
 import jax
 INSTANCES = {
+    'Fokker-Planck'          : fokker_planck,
     'Kinetic-Fokker-Planck'  : kinetic_fokker_planck,
     'Euler-Poisson'          : euler_poisson,
     'Homogeneous-Landau'     : hlandau,
